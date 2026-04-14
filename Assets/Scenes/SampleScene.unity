@@ -548,8 +548,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 315140543}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: BackgroundChanger
+        m_TargetAssemblyTypeName: ChangeBackground, Assembly-CSharp
+        m_MethodName: BackGroundChangerLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -609,8 +609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c1f830d319dcd4a871ea8c3739c2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tlodom: {fileID: 942934938}
-  tloogrod: {fileID: 1566537869}
+  backgrounds: []
 --- !u!1 &325046510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1007,7 @@ GameObject:
   - component: {fileID: 787757397}
   - component: {fileID: 787757396}
   - component: {fileID: 787757400}
+  - component: {fileID: 787757401}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1072,7 +1072,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1127,6 +1127,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c5ba4b61006d54ea79160a55c26427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &787757401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787757395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c1f830d319dcd4a871ea8c3739c2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgrounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &843860263
 GameObject:
   m_ObjectHideFlags: 0
