@@ -1717,7 +1717,6 @@ GameObject:
   - component: {fileID: 292892674}
   - component: {fileID: 292892676}
   - component: {fileID: 292892675}
-  - component: {fileID: 292892677}
   m_Layer: 5
   m_Name: base
   m_TagString: Untagged
@@ -1783,18 +1782,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292892673}
   m_CullTransparentMesh: 1
---- !u!114 &292892677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292892673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1891fd110481a048aeda84679f3f4ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &299213322
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,7 +4326,7 @@ GameObject:
   - component: {fileID: 876939241}
   - component: {fileID: 876939245}
   - component: {fileID: 876939244}
-  - component: {fileID: 876939243}
+  - component: {fileID: 876939248}
   m_Layer: 5
   m_Name: bow
   m_TagString: Untagged
@@ -4363,22 +4350,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440, y: 28.658}
+  m_AnchoredPosition: {x: -450.55, y: -16.846}
   m_SizeDelta: {x: 244.0475, y: 327.9752}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &876939243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876939240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c9143c1c553ce945908369aacfd93f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 787757398}
 --- !u!114 &876939244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4417,6 +4391,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876939240}
   m_CullTransparentMesh: 1
+--- !u!114 &876939248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876939240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9143c1c553ce945908369aacfd93f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 787757398}
 --- !u!1 &879027496
 GameObject:
   m_ObjectHideFlags: 0
@@ -10884,13 +10871,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: ColorPickerHair
       objectReference: {fileID: 0}
+    - target: {fileID: 2195840689978743692, guid: e75e04bbeb734f14ca192bf883c7a311, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4594808726580365966, guid: e75e04bbeb734f14ca192bf883c7a311, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8916249008987336888, guid: e75e04bbeb734f14ca192bf883c7a311, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
