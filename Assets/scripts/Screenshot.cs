@@ -1,13 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
-// Generate a screenshot and save it to disk with the name SomeLevel.png.
-
-public class ExampleScript : MonoBehaviour
+[RequireComponent(typeof(Button))]
+public class Screenshot : MonoBehaviour
 {
-    void OnMouseDown()
+    [SerializeField] private string _subFolder = "Screenshots";
+
+    private string SaveDirectory => Path.Combine(Application.persistentDataPath, _subFolder);
+
+    private void Awake()
     {
-        ScreenCapture.CaptureScreenshot("SomeLevel.png");
+        GetComponent<Button>().onClick.AddListener(TakeScreenshot);
+    }
+
+    private void TakeScreenshot()
+    {
+        if (!Directory.Exists(SaveDirectory))
+            Directory.CreateDirectory(SaveDirectory);
+
+        var fileName = $"screenshot_{DateTime.Now:yyyy-MM-dd_HH-mm-ss}.png";
+        var fullPath = Path.Combine(SaveDirectory, fileName);
+
+        ScreenCapture.CaptureScreenshot(fullPath);
+        Debug.Log($"Screenshot saved: {fullPath}");
     }
 }
