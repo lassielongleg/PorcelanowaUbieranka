@@ -21,7 +21,7 @@ public class Screenshot : MonoBehaviour
     [SerializeField, Range(0.01f, 1f)]
     private float _widthFactor = 0.25f;
 
-    private string SaveDirectory => Path.Combine(Application.persistentDataPath, _subFolder);
+    private string SaveDirectory => Path.Combine(Application.dataPath, _subFolder);
 
     private void Awake()
     {
