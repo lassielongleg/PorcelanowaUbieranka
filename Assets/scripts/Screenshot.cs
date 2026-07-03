@@ -17,13 +17,17 @@ public class Screenshot : MonoBehaviour
 
     private void TakeScreenshot()
     {
+        var texture = ScreenCapture.CaptureScreenshotAsTexture();
+
         if (!Directory.Exists(SaveDirectory))
             Directory.CreateDirectory(SaveDirectory);
 
         var fileName = $"screenshot_{DateTime.Now:yyyy-MM-dd_HH-mm-ss}.png";
         var fullPath = Path.Combine(SaveDirectory, fileName);
 
-        ScreenCapture.CaptureScreenshot(fullPath);
+        File.WriteAllBytes(fullPath, texture.EncodeToPNG());
+        Destroy(texture);
+
         Debug.Log($"Screenshot saved: {fullPath}");
     }
 }
