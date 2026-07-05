@@ -30,6 +30,12 @@ public class Screenshot : MonoBehaviour
 
     private void TakeScreenshot()
     {
+        StartCoroutine(TakeScreenshotCoroutine());
+    }
+
+    private System.Collections.IEnumerator TakeScreenshotCoroutine()
+    {
+        yield return new WaitForEndOfFrame();
         var full = ScreenCapture.CaptureScreenshotAsTexture();
 
         var texture = _captureMode == CaptureMode.CroppedWidth ? CropCentered(full) : full;

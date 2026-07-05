@@ -2993,8 +2993,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _subFolder: Screenshots
-  _captureMode: 0
-  _widthFactor: 0.333
+  _captureMode: 1
+  _widthFactor: 0.25
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
